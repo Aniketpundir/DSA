@@ -1,7 +1,8 @@
-// Pattern 11 : -- --
-// A B C
-// D E F
-// G H J
+// Pattern 16 : -- --
+// D
+// C D
+// B C D
+// A B C D
 
 #include <iostream>
 #include <conio.h>
@@ -13,15 +14,15 @@ int main()
     cin >> n;
 
     int i = 1;
-    int k = 0;
+
     while (i <= n)
     {
         int j = 1;
-        while (j <= n)
+        char ch = 'A' + n - i;
+        while (j <= i)
         {
-            char ch = 'A' + k;
-            cout << ch << " ";
-            k++;
+            cout << ch;
+            ch = ch + 1;
             j++;
         }
         cout << endl;

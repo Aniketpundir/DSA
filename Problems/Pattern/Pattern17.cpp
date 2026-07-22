@@ -1,7 +1,8 @@
-// Pattern 11 : -- --
-// A B C
-// D E F
-// G H J
+// Pattern 16 : -- --
+//       *
+//     * *
+//   * * *
+// * * * *
 
 #include <iostream>
 #include <conio.h>
@@ -13,15 +14,19 @@ int main()
     cin >> n;
 
     int i = 1;
-    int k = 0;
     while (i <= n)
     {
-        int j = 1;
-        while (j <= n)
+        int space = n - i;
+        while (space)
         {
-            char ch = 'A' + k;
-            cout << ch << " ";
-            k++;
+            cout << " ";
+            space--;
+        }
+
+        int j = 1;
+        while (j <= i)
+        {
+            cout << "*";
             j++;
         }
         cout << endl;
